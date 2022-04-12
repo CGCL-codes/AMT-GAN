@@ -12,6 +12,7 @@ In this paper, we propose adversarial makeup transfer GAN (AMT-GAN), a novel fac
 
 **2022/3/22**   We are sorting out our code. The PyTorch version will be released very soon. Stay Tuned!
 
+
 ## BibTeX
 
 ```bibtex

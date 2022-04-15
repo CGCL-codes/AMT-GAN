@@ -33,8 +33,8 @@ pip install -r requirements.txt
 - **Download assets**
   - Pretrained face recognition models and datasets are needed to train and test AMT-GAN, please download these assets at:\
     [[Google](https://drive.google.com/file/d/1Vuek5-YTZlYGoeoqyM5DlvnaXMeii4O8/view?usp=sharing)] [[Baidu](https://pan.baidu.com/s/1dsBYIqp22o_k_RrL_0vmWQ)] pw:9xg6
-  - Unzip the assets.zip file in ```AMT-GAN/assets```.
-  - The final project should be like this:
+  - Unzip the assets.zip file in ```AMT-GAN/assets```
+  - This folder contains the pre-trained FR models, the training data for AMT-GAN, and a subset of CelebA-HQ for evaluation. The final project should be like this:
     ```shell
     AMT-GAN
     └- assets
@@ -44,6 +44,18 @@ pip install -r requirements.txt
     └- checkpoints
     └- ...
     ```
+    *Please note that we do not own the datasets, for more information about them, check out [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ) and [BeautyGAN](https://github.com/wtjiang98/BeautyGAN_pytorch).*
+
+
+## Quick Start
+- **Train AMT-GAN**
+```shell 
+python train.py
+```
+- **Simple evaluation on local models and Face++**
+```shell 
+python test.py
+```
 
 ## Acknowledge
 

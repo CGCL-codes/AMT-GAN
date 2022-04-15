@@ -1,0 +1,8 @@
+DATA:
+    BATCH_SIZE: 1
+    IMG_SIZE: 256
+TRAINING:
+    NUM_EPOCHS: 5
+MODELZOO:
+    MODELS: ['facenet', 'ir152', 'irse50']
+

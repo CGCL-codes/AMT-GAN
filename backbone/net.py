@@ -407,22 +407,6 @@ class H_RRDB(nn.Module):
         return trunk
 
 
-# class H_ResB(nn.Module):
-#     def __init__(self, in_nc=3, out_nc=3, nf=64, nb=23):
-#         super(H_ResB, self).__init__()
-#
-#         self.conv_first = nn.Conv2d(in_nc, nf, 3, 1, 1, bias=True)
-#         basic_block = functools.partial(ResidualBlock_noBN, nf=nf)
-#         self.recon_trunk = make_layer(basic_block, nb)
-#         self.conv_last = nn.Conv2d(nf, out_nc, 3, 1, 1, bias=True)
-#         self.lrelu = nn.LeakyReLU(negative_slope=0.1, inplace=True)
-#
-#     def forward(self, x):
-#         fea = self.lrelu(self.conv_first(x))
-#         out = self.conv_last(self.recon_trunk(fea))
-#         return out
-
-
 ###################################################### for test ########################################################
 def weights_init_xavier(model):
     classname = model.__class__.__name__

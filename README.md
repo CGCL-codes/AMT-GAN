@@ -31,14 +31,14 @@ pip install -r requirements.txt
 ```
 
 - **Download assets**
-  - Pretrained face recognition models and datasets are needed to train and test AMT-GAN, please download these assets at:\
+  - Pretrained face recognition models and datasets are needed to train and test AMT-GAN, please download these assets at:
     [[Google](https://drive.google.com/file/d/1Vuek5-YTZlYGoeoqyM5DlvnaXMeii4O8/view?usp=sharing)] [[Baidu](https://pan.baidu.com/s/1dsBYIqp22o_k_RrL_0vmWQ)] pw:9xg6
   - Unzip the assets.zip file in ```AMT-GAN/assets```, this file contains the pre-trained FR models, the training data for AMT-GAN, and a subset of CelebA-HQ for evaluation.\
 *Please note that we do not own the datasets, for more information about them, check out [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ) and [BeautyGAN](https://github.com/wtjiang98/BeautyGAN_pytorch).*
 
 - **Download checkpoints**
-  - The pretrained checkpoints is available at:\
-    [[Google](https://drive.google.com/file/d/1Vuek5-YTZlYGoeoqyM5DlvnaXMeii4O8/view?usp=sharing)] [[Baidu](https://pan.baidu.com/s/1dsBYIqp22o_k_RrL_0vmWQ)] pw:9xg6
+  - The pretrained checkpoints is available at:
+    [[Google](https://drive.google.com/file/d/1QSsH_s8fKAwhFgSBv5014yGtewlmNJkI/view?usp=sharing)] [[Baidu](https://pan.baidu.com/s/1cxxe7TkeQ4zGAk4xLi3e_w)] pw:qxfd
   - Unzip the assets.zip file in ```AMT-GAN/checkpoints```
   
 - **The final project should be like this:**
@@ -49,6 +49,8 @@ pip install -r requirements.txt
        └- models
     └- backbone
     └- checkpoints
+       └- G.pth
+       └- ...
     └- ...
     ```
 
@@ -68,7 +70,7 @@ python test.py  # generated images saved in /assets/datasets/save
   - Modify ```TARGET_PATH``` in ```train.train_net```
   
 - **Local(training) models**
-  - Modify ```MODELS``` in ```configs.yaml```, such as ```['facenet', 'ir152', 'irse50'] → ['facenet', 'ir152', ''mobile_face'']```
+  - Modify ```MODELS``` in ```configs.yaml```, such as ```['facenet', 'ir152', 'irse50'] → ['facenet', 'ir152', 'mobile_face']```
   - To load your own pretrained models, modify ```backbone.solver.build_model``` and ```configs.yaml``` accordingly.
 
 - **Local(testing) models**

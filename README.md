@@ -30,9 +30,20 @@ conda activate AMT-GAN
 pip install -r requirements.txt
 ```
 
-- **Download assets**\
-Pretrained face recognition models and datasets are needed to train and test AMT-GAN, please download these assets at:\
-[[Google](https://drive.google.com/file/d/1Vuek5-YTZlYGoeoqyM5DlvnaXMeii4O8/view?usp=sharing)] [[Baidu](https://pan.baidu.com/s/1dsBYIqp22o_k_RrL_0vmWQ)] pw:9xg6
+- **Download assets**
+  - Pretrained face recognition models and datasets are needed to train and test AMT-GAN, please download these assets at:\
+    [[Google](https://drive.google.com/file/d/1Vuek5-YTZlYGoeoqyM5DlvnaXMeii4O8/view?usp=sharing)] [[Baidu](https://pan.baidu.com/s/1dsBYIqp22o_k_RrL_0vmWQ)] pw:9xg6
+  - Unzip the assets.zip file in the root path.
+  - The final project should be like this:
+    ```shell
+    AMT-GAN
+    └- assets
+       └- datasets
+       └- models
+    └- backbone
+    └- checkpoints
+    └- ...
+    ```
 
 ## Acknowledge
 

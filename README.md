@@ -33,8 +33,15 @@ pip install -r requirements.txt
 - **Download assets**
   - Pretrained face recognition models and datasets are needed to train and test AMT-GAN, please download these assets at:\
     [[Google](https://drive.google.com/file/d/1Vuek5-YTZlYGoeoqyM5DlvnaXMeii4O8/view?usp=sharing)] [[Baidu](https://pan.baidu.com/s/1dsBYIqp22o_k_RrL_0vmWQ)] pw:9xg6
-  - Unzip the assets.zip file in ```AMT-GAN/assets```
-  - This file contains the pre-trained FR models, the training data for AMT-GAN, and a subset of CelebA-HQ for evaluation. The final project should be like this:
+  - Unzip the assets.zip file in ```AMT-GAN/assets```, this file contains the pre-trained FR models, the training data for AMT-GAN, and a subset of CelebA-HQ for evaluation.\
+*Please note that we do not own the datasets, for more information about them, check out [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ) and [BeautyGAN](https://github.com/wtjiang98/BeautyGAN_pytorch).*
+
+- **Download checkpoints**
+  - The pretrained checkpoints is available at:\
+    [[Google](https://drive.google.com/file/d/1Vuek5-YTZlYGoeoqyM5DlvnaXMeii4O8/view?usp=sharing)] [[Baidu](https://pan.baidu.com/s/1dsBYIqp22o_k_RrL_0vmWQ)] pw:9xg6
+  - Unzip the assets.zip file in ```AMT-GAN/checkpoints```
+  
+- **The final project should be like this:**
     ```shell
     AMT-GAN
     └- assets
@@ -44,18 +51,37 @@ pip install -r requirements.txt
     └- checkpoints
     └- ...
     ```
-    *Please note that we do not own the datasets, for more information about them, check out [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ) and [BeautyGAN](https://github.com/wtjiang98/BeautyGAN_pytorch).*
-
 
 ## Quick Start
 - **Train AMT-GAN**
 ```shell 
-python train.py
+python train.py  # results saved in /log
 ```
 - **Simple evaluation on local models and Face++**
 ```shell 
-python test.py
+python test.py  # generated images saved in /assets/datasets/save
 ```
+
+## Customize
+- **Target identity**
+  - Put target face image in ```/assets/datasets/target```
+  - Modify ```TARGET_PATH``` in ```train.train_net```
+  
+- **Local(training) models**
+  - Modify ```MODELS``` in ```configs.yaml```, such as ```['facenet', 'ir152', 'irse50'] → ['facenet', 'ir152', ''mobile_face'']```
+  - To load your own pretrained models, modify ```backbone.solver.build_model``` and ```configs.yaml``` accordingly.
+
+- **Local(testing) models**
+  - Modify ```args.model_names``` in ```test.attack_local_models```
+
+- **Test image**
+  - Put test face image in ```/assets/datasets/test```, assert that the test image is from the same identy of target face image.
+  - Modify ```args.target_path``` in ```test.attack_local_models, test.attack_faceplusplus``` accordingly.
+
+- **Reference images**
+  - Put reference images (for makeup transfer) in ```/assets/datasets/reference```
+
+*Please note that if you want to train a new AMT-GAN, G.pth, H.pth, D_A.pth and D_B.pth in /checkpoints should be deleted or renamed.*
 
 ## Acknowledge
 

@@ -34,6 +34,9 @@ pip install -r requirements.txt
 Pretrained face recognition models and datasets are needed to train and test AMT-GAN, please download these assets at:\
 [[Google](https://www.google.com)] [[BaiDu](https://pan.baidu.com/s/1dsBYIqp22o_k_RrL_0vmWQ)] pw:9xg6
 
+## Acknowledge
+
+Some of the codes are built upon [PSGAN](https://github.com/wtjiang98/PSGAN), pretrained face recognition models are from [Adv-Makeup](https://github.com/TencentYoutuResearch/Adv-Makeup).
 
 ## BibTeX 
 ```bibtex

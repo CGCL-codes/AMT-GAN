@@ -12,7 +12,7 @@ In this paper, we propose adversarial makeup transfer GAN (AMT-GAN), a novel fac
 <img src="pipeline.png"/>
 
 ## Latest Update
-**2022/4/15**   We have released the official implementation code. README in developing.
+**2022/4/15**   We have released the official implementation code.
 
 ## Setup
 - **Get code**

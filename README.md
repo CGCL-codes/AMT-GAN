@@ -92,10 +92,12 @@ Some of the codes are built upon [PSGAN](https://github.com/wtjiang98/PSGAN), pr
 
 ## BibTeX 
 ```bibtex
-@article{hu2022protecting,
-  title =   {Protecting Facial Privacy: Generating Adversarial Identity Masks via Style-robust Makeup Transfer},
-  author =  {Hu, Shengshan and Liu, Xiaogeng and Zhang, Yechao and Li, Minghui and Zhang, Leo Yu and Jin, Hai and Wu, Libing},
-  journal = {arXiv preprint arXiv:2203.03121},
-  year =    {2022}
+@InProceedings{Hu_2022_CVPR,
+    author    = {Hu, Shengshan and Liu, Xiaogeng and Zhang, Yechao and Li, Minghui and Zhang, Leo Yu and Jin, Hai and Wu, Libing},
+    title     = {Protecting Facial Privacy: Generating Adversarial Identity Masks via Style-Robust Makeup Transfer},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {15014-15023}
 }
 ```

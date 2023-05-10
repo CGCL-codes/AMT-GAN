@@ -1,6 +1,4 @@
 six==1.9.0
-tqdm==4.65.0
-requests==2.30.0
 dlib==19.23.1
 fvcore==0.1.5.post20220414
 matplotlib==3.5.1
